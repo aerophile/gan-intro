@@ -167,7 +167,7 @@ class GAN(object):
 
     def train(self):
         with tf.Session() as session:
-            tf.global_variables_initializer().run()
+            tf.initialize_all_variables().run()
 
             # pretraining discriminator
             num_pretrain_steps = 1000
